@@ -25,6 +25,8 @@ export class AppHome {
     const image = await Camera.getPhoto({
       quality: 90,
       allowEditing: true,
+      width: 500,
+      height: 400,
       resultType: CameraResultType.Uri
     });
     this.resetCanvas();
@@ -80,9 +82,11 @@ export class AppHome {
       </ion-header>,
 
       <ion-content padding>
-        <div id="container">
-          <canvas id="image" width="625" height="500" />
-          <canvas id="overlay" width="625" height="500" />
+        <div class="scroll">
+          <div id="container">
+            <canvas id="image" width="500" height="400" />
+            <canvas id="overlay" width="500" height="400" />
+          </div>
         </div>
         <ion-button onClick={() => this.takePicture()}>Camera</ion-button>
       </ion-content>
