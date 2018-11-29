@@ -1,0 +1,11 @@
+#overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#container {
+    position : relative;
+    width : 700px;
+    height : 500px;
+}
